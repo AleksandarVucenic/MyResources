@@ -1,0 +1,36 @@
+.mCustomScrollbar{  }
+	.mCustomScrollBox{  }
+		.mCSB_container{  }
+
+.mCSB_scrollTools{ 
+	display: block; 
+	height: 100%; 
+	position: absolute; 
+	top: 0px; right: 0px; 
+	width: 5px;
+}
+	.mCSB_draggerContainer{
+		position: absolute;
+		top: 0px; bottom: 0px; left: 0px; right: 0px;
+		height: auto;
+	}
+		.mCSB_dragger{
+			cursor: pointer;
+			height: 80px !important;
+			position: absolute;
+			top: 0px;
+			width: 100%;
+		}
+			.mCSB_dragger_bar{
+				background: rgba(255, 255, 255, 0.75);
+				height: 100%;
+				margin: 0px auto;
+				width: 5px;
+			}
+				.mCSB_draggerRail{
+					background: rgba(0, 0, 0, 0.75);
+					height: 100%;
+					margin: 0px auto;
+					width:1px;
+				}
+
