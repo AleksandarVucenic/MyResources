@@ -1,4 +1,0 @@
-MyResources
-===========
-
-My Programming Resources
