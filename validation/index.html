@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Validator</title>
+		<script type="text/javascript" src="formValidatorLibrary.js"></script>
+	</head>
+	<body>
+		
+	<form id="testForm" >
+		
+		<fieldset>
+			<div class="input">
+				<label> Name </label>
+				<input type="text" name="textbox" id="textbox" value="" required="required"/>
+			</div>
+
+			<div class="input">
+				<label> Email </label>
+				<input type="email" name="textbox" id="textbox" value="" required="required"/>
+			</div>
+
+			<div class="input">
+				<label> Password </label>
+				<input type="password" min="3" max="6" name="password" id="password" value="" required="required"/>
+			</div>
+
+			<div class="input">
+				<label> Password Match </label>
+				<input type="password" min="3" max="6" name="passwodmatch" id="passwordmatch" value="" data-validation-match="equal:password|more:textbox"required="required"/>
+			</div>
+
+			<!-- RADIO BUTTON -->
+			<div class="input">
+				<label> 20 </label>
+				<input type="radio" name="radiobutton" id="radiobutton" value="20" required="required"/>
+			</div>
+
+			<div class="input">
+				<label> 40 </label>
+				<input type="radio" name="radiobutton" id="radiobutton" value="40" />
+			</div>
+
+			<div class="input">
+				<label> 60 </label>
+				<input type="radio" name="radiobutton" id="radiobutton" value="60" required="required"/>
+			</div>
+			<!-- RADIO BUTTON -->
+
+			<!-- CHECK BUTTON -->
+			<div class="input">
+				<label> 1 </label>
+				<input type="checkbox" name="checkbox" id="checkbox" value="1" required="required"/>
+			</div>
+			<!-- CHECK BUTTON -->
+			<div class="input">
+				<label> Select item; </label>
+				<select id="slect" name="select" required="required">
+					<option value="">--</option>
+					<option value="1">Test 1</option>
+				</select>
+			</div>
+			<div class="input">
+				<label> Comment </label>
+				<textarea required="required"></textarea>
+			</div>
+
+			<hr>
+			<h3>regular expresion</h3>
+			<div class="input">
+				<label> Reg Email </label>
+				<input type="text" name="regularex" data-validation-regularex="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,4}$" id="regularex" value="" required="required" />
+			</div>
+	
+
+
+			
+		</fieldset>
+
+		<button type="button" onclick="formValidate('testForm')"> Submit </button>
+		<button type="reset">  Reset  </button>
+
+	</form>
+	<script>
+	function formValidate(form) {
+
+		var validate = formValidatorObject.validateForm(form);	
+		alert(validate);
+	}
+	
+
+
+	</script>
+	</body>
+</html>
