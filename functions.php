@@ -1,4 +1,4 @@
-<?php
+<?phpa
 
 function getRiskType($id) {
     $sql = "SELECT * FROM `tdbRiskItemTypes` WHERE riskItemTypeID = $id LIMIT 0,1";
